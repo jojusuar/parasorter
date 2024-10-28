@@ -161,8 +161,12 @@ void printNodes(Node *top) {
 
 void printList(List *list){ /* Implemented by José Julio Suárez */
 	printf("[");
-	printNodes(list->head);
-	printf("]\n");
+	Node *current = list->head;
+    while(current != NULL){
+        printf("%d,", current->n);
+        current = current->next;
+    }
+    printf("]\n");
 }
 
 void Split(List *list, List **list2) { /* Modified by José Julio Suárez */
