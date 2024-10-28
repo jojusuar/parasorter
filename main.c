@@ -89,6 +89,7 @@ int main(int argc, char **argv) {
     list = mergesort(list);
     printf("\nsorted list: ");
     printList(list);
+    deleteList(list);
     printf("\nThreads created for parallel sorting: %d\n", threads_created);
     return 0;
 }

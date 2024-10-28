@@ -42,7 +42,7 @@ void appendNode(List * , Node * ); /* Implemented by José Julio Suárez */
 
 void appendList(List * , List * ); /* Implemented by José Julio Suárez */
 
-Node *deleteList(Node *); /* deletes a list */
+void deleteList(List *); /* Modified by José Julio Suárez */
 
 void printList(List *); /* Implemented by José Julio Suárez */
 

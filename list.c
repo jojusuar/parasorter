@@ -143,13 +143,14 @@ void appendList(List *target, List *source){ /* Implemented by José Julio Suár
     free(source);
 }
 
-Node *deleteList(Node *top) {
-	if (top != NULL) {				/* if not reached end of the list... */
-		deleteList(top -> next);	/* ...move on */
-		free(top);					/* delete the node */
+void deleteList(List *list) {  /* Modified by José Julio Suárez */
+	Node *current = list->head;
+	while(current != NULL){
+		Node *next = current->next;
+		free(current);
+		current = next;
 	}
-	else
-		return NULL;
+	free(list);
 }
 
 void printNodes(Node *top) {
